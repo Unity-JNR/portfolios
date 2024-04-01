@@ -51,7 +51,7 @@ export default {
   scale: 115%;
   transition: all 0.15s ease-in-out;
 }
-#body{
+/* #body{
   transition: all 0.5s ease-in-out;
   background-image: url('https://cdn-images.imagevenue.com/19/65/a5/ME17X4MH_o.jpg');
   min-height: 100vh;
@@ -59,7 +59,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.104), rgba(0, 0, 0, 0.175));
-}
+} */
 #box {
   white-space: nowrap;
   position: relative;

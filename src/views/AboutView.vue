@@ -78,14 +78,14 @@ export default {
 </script>
 
 <style scoped>
-.about{
+/* .about{
   background-image: url('https://cdn-images.imagevenue.com/19/65/a5/ME17X4MH_o.jpg');
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.104), rgba(0, 0, 0, 0.175));
-}
+} */
 
 .about {
     font-family: 'Roboto', sans-serif;
