@@ -2,7 +2,7 @@
     <!-- <Navigation/> -->
     <h1 id="heading">Testimonial</h1>
 	
-	<!-- <div v-if="$store.state.testimonial.length > 0"> -->
+	<div v-if="$store.state.testimonial.length > 0">
 
 		<div class="container">
 	  <div class="row">
@@ -32,23 +32,22 @@
 		  </div>
 	  </div>
 	</div> <!--container-->
-	<!-- </div> -->
+	</div>
 
 
-	<!-- <div v-else>
+	<div v-else>
      <spinner/>
 	</div>
 
-	<footers/> -->
+	
  </template>
  
  <script>
- // @ is an alias to /src
-
-
- 
- export default {
- 
+import spinner from '@/components/spinner.vue'
+    export default {
+        components: {
+            spinner
+        },
     
      methods: {
          fetchTestimonial() {
@@ -70,6 +69,10 @@
  <style scoped >
  #heading{
      color: white;
+ }
+
+ #heading::first-letter{
+	color: lawngreen;
  }
 
 h1 {

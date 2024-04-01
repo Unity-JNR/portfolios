@@ -1,26 +1,31 @@
 <template>
  
-      <h1 id="heading">Projects</h1>
+      <h1 id="heading" class="py-4">Projects</h1>
   
-  
-        <div class="container">
-          <div class="row">
-            <div v-for="project in $store.state.project" :key="project.title" class="col-lg-4 pb-4 d-flex justify-content-center">
-                <div class="card">
-                <img class="image card__image" :src="project.url">
-                <div class="card__content">
-                    <p class="card__title">{{ project.title }}</p>
-                    <p class="card__description">{{ project.decription }}</p>
-                    <button class="card__button"><a :href="project.github" target="_blank">GitHub</a></button>
-                    <button class="card__button"><a :href="project.vercel" target="_blank">Vercel</a></button>
-                
-                </div>
-                </div>
+         <div v-if="$store.state.project.length > 0" >
+           <div class="container">
+             <div class="row">
+               <div v-for="project in $store.state.project" :key="project.title" class="col-lg-4 pb-4 d-flex justify-content-center">
+                   <div class="card">
+                   <img class="image card__image" :src="project.url">
+                   <div class="card__content">
+                       <p class="card__title">{{ project.title }}</p>
+                       <p class="card__description">{{ project.decription }}</p>
+                       <button class="card__button"><a :href="project.github" target="_blank">GitHub</a></button>
+                       <button class="card__button"><a :href="project.vercel" target="_blank">Vercel</a></button>
+                   
+                   </div>
+                   </div>
+   
+                 </div>
+               </div>
+         
+           </div> <!--container-->
+         </div>
 
-              </div>
-            </div>
-      
-        </div> <!--container-->
+         <div v-else>
+          <spinner/>
+         </div>
 
   
       
@@ -29,11 +34,11 @@
   
    
    <script>
-
-   
-   
-   export default {
-   
+import spinner from '@/components/spinner.vue'
+    export default {
+        components: {
+            spinner
+        },
      
        computed: {
           fetchProject() {

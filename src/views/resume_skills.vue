@@ -1,6 +1,6 @@
 <template>
-
-    <div class="container">
+<div  v-if="$store.state.education !== '' && $store.state.job !== '' && $store.state.skills.length > 0"> 
+    <div class="container pt-4">
         <div class="card" >
             <div class="face face1">
                 <div class="content">
@@ -48,18 +48,28 @@
             </div>
         </div>
     </div>
+
     <div v-for="skill in $store.state.skills" :key="skill.level" id="placement">
  <div>
      <p id="skilltext">{{skill.level}}</p>
    <img :src="skill.img" alt="" id="skillimage">
  </div>
     </div>
+</div>
+
+<div v-else>
+  <spinner/>
+</div>
 
    
 </template>
 
 <script>
+import spinner from '@/components/spinner.vue'
     export default {
+        components: {
+            spinner
+        },
         computed: {
     fetcheducation() {
       // Call the fetchData action using dispatch

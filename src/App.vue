@@ -1,14 +1,23 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/resume">resume</router-link> |
-    <router-link to="/projects">projects</router-link> |
-    <router-link to="/testimonials">testimonials</router-link> |
-    <router-link to="/contact">contact</router-link> 
-  </nav>
+  <Navigation/>
   <router-view/>
+  <footers/>
 </template>
+
+<script>
+import Navigation from '@/components/Navigation.vue'
+import footers from '@/components/footers.vue'
+
+export default {
+  components:{
+    Navigation,
+    footers
+   
+  }
+}
+
+</script>
+
 
 <style>
 #app {
@@ -27,14 +36,17 @@
 
 nav {
   padding: 30px;
+  text-align: center;
+  background-color: rgb(6, 5, 5,0.7);
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
+  padding: 5px;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: lawngreen;
 }
 </style>

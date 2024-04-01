@@ -5,41 +5,47 @@
       <header>
         <h1>About Me</h1>
     </header>
-    <main>
-        <section class="about-section">
-            <h2>Who am I</h2>
-            <p class="lead text-dark">{{ $store.state.about }}</p>
-        </section>
-        <section class="about-section">
-          <hr>
-          <h3 id="heading">Details:</h3>
-                 <p class="lead">DOB:{{$store.state.dob}}</p>
-                 <hr>
-          <h2>more about me: </h2>
-          <div class="container">
-             <div class="row">
-              <div class="col-lg-6">
-                <ul class="list-group">
-                 <h3 id="heading">Hobbies:</h3>
-                 <li class="list-group-item">Play games</li>
-                 <li class="list-group-item">Watching Anime</li>
-                 <li class="list-group-item">Spending time with family and friends</li>
-                 <li class="list-group-item">Coding</li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="list-group">
-                 <h3 id="heading">languages:</h3>
-                 <li class="list-group-item ">English</li>
-                 <li class="list-group-item ">Afrikaans</li>
-              
-                </ul>
-              </div>
-             </div>
-          </div>
-        </section>
-    </main>
+    <div v-if="$store.state.about && typeof $store.state.about === 'string' && $store.state.about.trim() !== ''">
+      <main>
+          <section class="about-section">
+              <h2>Who am I</h2>
+              <p class="lead text-dark">{{ $store.state.about }}</p>
+          </section>
+          <section class="about-section">
+            <hr>
+            <h3 id="heading">Details:</h3>
+                   <p class="lead">DOB:{{$store.state.dob}}</p>
+                   <hr>
+            <h2>more about me: </h2>
+            <div class="container">
+               <div class="row">
+                <div class="col-lg-6">
+                  <ul class="list-group">
+                   <h3 id="heading">Hobbies:</h3>
+                   <li class="list-group-item">Play games</li>
+                   <li class="list-group-item">Watching Anime</li>
+                   <li class="list-group-item">Spending time with family and friends</li>
+                   <li class="list-group-item">Coding</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul class="list-group">
+                   <h3 id="heading">languages:</h3>
+                   <li class="list-group-item ">English</li>
+                   <li class="list-group-item ">Afrikaans</li>
+                
+                  </ul>
+                </div>
+               </div>
+            </div>
+          </section>
+      </main>
+    </div>
         
+    <div v-else>
+      <spinner/>
+    </div>
+    
      
     </div>
    
@@ -48,9 +54,14 @@
 
 
 <script>
+import spinner from '@/components/spinner.vue'
 
 
 export default {
+
+  components:{
+    spinner
+  },
 
 
   computed: {

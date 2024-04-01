@@ -1,4 +1,5 @@
 <template>
+  <!-- <Navigation/> -->
   <div id="body">
     <div class="container" id="landingBody">
       <div class="px-4 py-5 my-5 text-center">
@@ -22,13 +23,13 @@
       </div>
     </div>
   </div>
-
+<!-- <footers/> -->
 </template>
 <script>
-// import SocialMediaIcons from '@/components/SocialMediaIcons.vue';
-// import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 export default {
-
+components:{
+  // spinner
+}
 
 }
 </script>
