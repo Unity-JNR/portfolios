@@ -1,69 +1,58 @@
 <template>
   <div class="about">
-
     <div class="box">
       <header>
         <h1>About Me</h1>
-    </header>
-    <div v-if="$store.state.about && typeof $store.state.about === 'string' && $store.state.about.trim() !== ''">
-      <main>
+      </header>
+      <div v-if="$store.state.about && typeof $store.state.about === 'string' && $store.state.about.trim() !== ''">
+        <main>
           <section class="about-section">
-              <h2>Who am I</h2>
-              <p class="lead text-dark">{{ $store.state.about }}</p>
+            <h2>Who am I</h2>
+            <p class="lead text-dark">{{ $store.state.about }}</p>
           </section>
           <section class="about-section">
             <hr>
             <h3 id="heading">Details:</h3>
-                   <p class="lead">DOB:{{$store.state.dob}}</p>
-                   <hr>
+            <p class="lead">DOB:{{$store.state.dob}}</p>
+            <hr>
             <h2>more about me: </h2>
             <div class="container">
-               <div class="row">
+              <div class="row">
                 <div class="col-lg-6">
                   <ul class="list-group">
-                   <h3 id="heading">Hobbies:</h3>
-                   <li class="list-group-item">Play games</li>
-                   <li class="list-group-item">Watching Anime</li>
-                   <li class="list-group-item">Spending time with family and friends</li>
-                   <li class="list-group-item">Coding</li>
+                    <h3 id="heading">Hobbies:</h3>
+                    <li class="list-group-item">Play games</li>
+                    <li class="list-group-item">Watching Anime</li>
+                    <li class="list-group-item">Spending time with family and friends</li>
+                    <li class="list-group-item">Coding</li>
                   </ul>
                 </div>
                 <div class="col-lg-6">
                   <ul class="list-group">
-                   <h3 id="heading">languages:</h3>
-                   <li class="list-group-item ">English</li>
-                   <li class="list-group-item ">Afrikaans</li>
-                
+                    <h3 id="heading">languages:</h3>
+                    <li class="list-group-item">English</li>
+                    <li class="list-group-item">Afrikaans</li>
                   </ul>
                 </div>
-               </div>
+              </div>
             </div>
           </section>
-      </main>
+        </main>
+      </div>
+      <div v-else>
+        <spinner/>
+      </div>
     </div>
-        
-    <div v-else>
-      <spinner/>
-    </div>
-    
-     
-    </div>
-   
   </div>
 </template>
-
 
 <script>
 import spinner from '@/components/spinner.vue'
 
-
 export default {
-
   components:{
     spinner
   },
-
-
   computed: {
     fetchData() {
       this.$store.dispatch('fetchData');
@@ -78,7 +67,6 @@ export default {
       this.$store.dispatch('fetchpassions');
     }
   },
-
   mounted() {
     this.fetchData;
     this.fetchAbout;
@@ -89,15 +77,6 @@ export default {
 </script>
 
 <style scoped>
-/* .about{
-  background-image: url('https://cdn-images.imagevenue.com/19/65/a5/ME17X4MH_o.jpg');
-  min-height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.104), rgba(0, 0, 0, 0.175));
-} */
-
 .about {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -132,15 +111,40 @@ main {
     margin-top: 0;
 }
 
-
 hr {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  
- }
-/* Additional styling can be added here */
+}
 
+/* Media Queries */
+@media screen and (max-width: 300px) {
+  /* Adjust styles for small devices (less than 300px wide) */
+  header {
+    padding: 10px 0;
+  }
+  p{
+    text-wrap:wrap;
+  }
+}
 
+@media screen and (min-width: 301px) and (max-width: 720px) {
+  /* Adjust styles for devices between 301px and 720px wide */
+  main {
+    padding: 10px;
+  }
+  p{
+    text-wrap:wrap;
+  }
+}
 
+@media screen and (min-width: 721px) {
+  /* Adjust styles for larger devices (greater than 720px wide) */
+  .about-section {
+    max-width: 1000px;
+  }
+  p{
+    text-wrap:wrap;
+  }
+}
 </style>

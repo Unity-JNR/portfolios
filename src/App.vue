@@ -49,4 +49,7 @@ nav a {
 nav a.router-link-exact-active {
   color: lawngreen;
 }
+
+
+
 </style>

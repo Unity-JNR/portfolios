@@ -1,52 +1,58 @@
 <template>
 <div  v-if="$store.state.education !== '' && $store.state.job !== '' && $store.state.skills.length > 0"> 
-    <div class="container pt-4">
-        <div class="card" >
-            <div class="face face1">
-                <div class="content">
-                    <img :src="$store.state.education.url">
-                    <h3>Education</h3>
+    <div class="container pt-4 ">
+        <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img :src="$store.state.education.url">
+                        <h3>Education</h3>
+                    </div>
                 </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                      <ul>
-                        <li>
-                            <p> {{ $store.state.education.school }}</p>
-                        </li>
-                        <li>
-                            <p> {{ $store.state.education.year }}</p>
-                        </li>
-                        <li>
-                            <p>major subject: {{ $store.state.education.sub }}</p>
-                        </li>
-                      </ul>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <img :src="$store.state.job.url">
-                    <h3>Job</h3>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <ul>
-                        <li>
-                            <p>    {{ $store.state.job.work }}</p>
-                        </li>
-                        <li>
-                            <p>       {{ $store.state.job.at }}</p>
-                        </li>
-                        <li>
-                            <p>      {{ $store.state.job.time }}</p>
-                        </li>
-                      </ul>
+                <div class="face face2">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <p> {{ $store.state.education.school }}</p>
+                            </li>
+                            <li>
+                                <p> {{ $store.state.education.year }}</p>
+                            </li>
+                            <li>
+                                <p>major subject: {{ $store.state.education.sub }}</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img :src="$store.state.job.url">
+                        <h3>Job</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <p>    {{ $store.state.job.work }}</p>
+                            </li>
+                            <li>
+                                <p>       {{ $store.state.job.at }}</p>
+                            </li>
+                            <li>
+                                <p>      {{ $store.state.job.time }}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <div v-for="skill in $store.state.skills" :key="skill.level" id="placement">
@@ -104,7 +110,7 @@ import spinner from '@/components/spinner.vue'
     width: 1000px;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .container .card{
@@ -208,4 +214,24 @@ import spinner from '@/components/spinner.vue'
     font-size: medium;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
+
+  @media (max-width: 768px) {
+    .container {
+        width: 100px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        /* padding-top: 2px ; */
+    }
+
+    .container .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container .card {
+        margin-bottom: 10px;
+    }
+}
 </style>

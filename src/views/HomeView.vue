@@ -5,7 +5,7 @@
       <div class="px-4 py-5 my-5 text-center">
         <div class="display-5 fw-bold text-body-emphasis">
           <div class="container mt-5 mb-0" id="box">
-            <span id="introText">Unity Demas portfolio</span>
+            <span id="introText">Unity Demas's Portfolio</span>
           </div>
         </div>
         <p class="lead mb-1" id="text-L">Aspiring web developer</p>
@@ -13,10 +13,12 @@
           <!-- <p class="lead mb-4" id="text-S">{{ ix.subtxt }}</p> -->
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <router-link to="/projects">
-              <button type="button" class="btn btn-lg px-4" data-btn></button>
+              <button type="button" class="btn btn-lg px-4" data-btn>
+               My work
+              </button>
             </router-link>
             <router-link to="/contact">
-              <button type="button" class="btn btn-lg px-4" data-btn></button>
+              <button type="button" class="btn btn-lg px-4" data-btn>contact me</button>
             </router-link>
           </div>
         </div>
@@ -214,7 +216,7 @@ components:{
   [data-btn] {
     width: 9em;
     height: 2em;
-    color: rgb(255, 119, 0);
+    color: rgb(16, 221, 53);
     font-weight: bold;
     border-radius: 20em;
     font-family: inherit;
@@ -231,7 +233,7 @@ components:{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to right, #D80F0F 10%, #FF8000 100%);
+    background-image: linear-gradient(to right, #25e807 10%, #2cf52c 100%);
     transition: .5s ease;
     display: block;
     z-index: -1;
