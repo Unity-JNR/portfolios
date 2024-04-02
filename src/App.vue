@@ -2,6 +2,7 @@
   <Navigation/>
   <router-view/>
   <footers/>
+  
 </template>
 
 <script>
@@ -26,12 +27,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-image: url('https://cdn-images.imagevenue.com/19/65/a5/ME17X4MH_o.jpg');
+  /* background-image: url('https://cdn-images.imagevenue.com/a8/30/fd/ME17YN2B_o.jpg');
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.104), rgba(0, 0, 0, 0.175));
+  border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.104), rgba(0, 0, 0, 0.175)); */
+  background-color: black;
 }
 
 nav {

@@ -57,8 +57,8 @@
 
     <div v-for="skill in $store.state.skills" :key="skill.level" id="placement">
  <div>
+     <img :src="skill.img" alt="" id="skillimage">
      <p id="skilltext">{{skill.level}}</p>
-   <img :src="skill.img" alt="" id="skillimage">
  </div>
     </div>
 </div>
@@ -197,7 +197,7 @@ import spinner from '@/components/spinner.vue'
 }
 
 #skillimage{
-    width: 250px;
+    width: 300px;
     height: 250px;
     background-color: white;
 
@@ -209,11 +209,13 @@ import spinner from '@/components/spinner.vue'
     
   }
   #skilltext{
-    color: white;
+    color: rgb(1, 1, 1);
     font-weight: 800;
     font-size: medium;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 5px ;
   }
+
 
   @media (max-width: 768px) {
     .container {

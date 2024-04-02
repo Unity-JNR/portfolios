@@ -7,31 +7,41 @@
       <div v-if="$store.state.about && typeof $store.state.about === 'string' && $store.state.about.trim() !== ''">
         <main>
           <section class="about-section">
-            <h2>Who am I</h2>
-            <p class="lead text-dark">{{ $store.state.about }}</p>
+            <h2>Who am I?</h2>
+            <div class="bg">
+              <p class="lead p">{{ $store.state.about }}</p>
+            </div>
           </section>
           <section class="about-section">
             <hr>
-            <h3 id="heading">Details:</h3>
-            <p class="lead">DOB:{{$store.state.dob}}</p>
-            <hr>
-            <h2>more about me: </h2>
+            <h2 class=" pt-4">More About Me: </h2>
             <div class="container">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4 ">
+                  <h3 id="heading">Hobbies:</h3>
                   <ul class="list-group">
-                    <h3 id="heading">Hobbies:</h3>
                     <li class="list-group-item">Play games</li>
                     <li class="list-group-item">Watching Anime</li>
                     <li class="list-group-item">Spending time with family and friends</li>
                     <li class="list-group-item">Coding</li>
                   </ul>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
+                  <h3 id="heading">Languages:</h3>
                   <ul class="list-group">
-                    <h3 id="heading">languages:</h3>
-                    <li class="list-group-item">English</li>
+                    <li class= "list-group-item">English</li>
                     <li class="list-group-item">Afrikaans</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <h3 id="heading">Details:</h3>
+                  <ul class="list-group">
+                    <li class= "list-group-item" ><p >DOB:{{$store.state.dob}}</p></li>
+                    <li class= "list-group-item" ><p >Location: Northpine </p></li>
+                    <li class= "list-group-item" ><p >Contact:+27 83 267 3554 </p></li>
+                    <li class= "list-group-item" ></li>
                   </ul>
                 </div>
               </div>
@@ -84,16 +94,27 @@ export default {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #D9D9D9;;
+    color: #000;
     text-align: center;
     padding: 20px 0;
+  
 }
 
 header h1 {
     margin: 0;
+    font-weight: bolder !important;
+}
+h2{
+  color: #D9D9D9 !important;
+}
+h2::first-letter{
+  color: lawngreen !important;
 }
 
+.p{
+  color: #D9D9D9;
+}
 main {
     display: flex;
     flex-direction: column;
@@ -113,8 +134,27 @@ main {
 
 hr {
   border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  height: 1.5px;
+  background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+}
+.bg {
+  background-color: rgb(10, 10, 10,0.8);
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0 0 20px lawngreen; /* Horizontal offset, vertical offset, blur radius, color */
+}
+.list-group-item{
+  height: 50px;
+  background-color: #D9D9D9;
+}
+
+h3{
+  color: lawngreen;
+}
+
+.list-group{
+  border-radius: 20px;
+  box-shadow: 0 0 10px lawngreen; /* Horizontal offset, vertical offset, blur radius, color */
 }
 
 /* Media Queries */
