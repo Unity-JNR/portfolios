@@ -107,6 +107,8 @@ import spinner from '@/components/spinner.vue'
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
 /* .resume{
     background-image: url('https://cdn-images.imagevenue.com/19/65/a5/ME17X4MH_o.jpg');
   min-height: 100vh;
@@ -126,6 +128,7 @@ header {
 header h1 {
     margin: 0;
     font-weight: bolder !important;
+    font-family: 'Marcellus', sans-serif;
 }
 hr {
   border: 0;
@@ -187,6 +190,7 @@ hr {
     color: #D9D9D9;
     text-align: center;
     font-size: 1.5em;
+    font-family: 'Marcellus', sans-serif;
 }
 .container .card .face.face1 .content h3::first-letter{
     color: lawngreen;
@@ -211,6 +215,7 @@ hr {
 .container .card .face.face2 .content p{
     margin: 0;
     padding: 0;
+    font-family: 'Marcellus', sans-serif;
 }
 
 .container .card .face.face2 .content a{
@@ -244,7 +249,7 @@ hr {
     color: #D9D9D9;
     font-weight: 800;
     font-size: medium;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Marcellus', sans-serif;
     margin-top: 5px ;
   }
 

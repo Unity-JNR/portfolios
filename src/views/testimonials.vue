@@ -69,6 +69,8 @@ import spinner from '@/components/spinner.vue'
  
  
  <style scoped >
+ @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
 header {
     background-color: #D9D9D9;;
     color: #000;
@@ -80,17 +82,20 @@ header {
 header h1 {
     margin: 0;
     font-weight: bolder !important;
+	font-family: 'Marcellus', sans-serif;
 }
 
 h1 {
 	font-size: 5.25vmin;
 	text-align: center;
 	color: rgb(0, 0, 0);
+	font-family: 'Marcellus', sans-serif;
 }
 #test {
 	font-size: max(5pt, 2vmin);
 	line-height: 1.2;
 	color: lawngreen;
+	font-family: 'Marcellus', sans-serif;
 	/* margin-bottom: 1.5rem;
 	margin-right: 2.5rem; */
 }
@@ -98,6 +103,7 @@ h1 {
 #name{
 	color: #D9D9D9;
 	margin-right: 2.5rem;
+	font-family: 'Marcellus', sans-serif;
 }
 #name::first-letter{
 	color: lawngreen !important;
@@ -177,7 +183,7 @@ h1 {
 .dot {
 	width: 14px;
 	height: 14px;
-	background: yellow;
+	background: white;
 	border: 1px solid indigo;
 	border-radius: 50%;
 	transition: .3s ease-in-out .3s;

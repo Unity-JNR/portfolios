@@ -87,8 +87,10 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
 .about {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Marcellus', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -104,9 +106,11 @@ header {
 header h1 {
     margin: 0;
     font-weight: bolder !important;
+    font-family: 'Marcellus', sans-serif;
 }
 h2{
   color: #D9D9D9 !important;
+  font-family: 'Marcellus', sans-serif;
 }
 h2::first-letter{
   color: lawngreen !important;
@@ -114,6 +118,7 @@ h2::first-letter{
 
 .p{
   color: #D9D9D9;
+  font-family: 'Marcellus', sans-serif;
 }
 main {
     display: flex;
@@ -130,6 +135,7 @@ main {
 .about-section h2 {
     color: #333;
     margin-top: 0;
+    font-family: 'Marcellus', sans-serif;
 }
 
 hr {
@@ -146,10 +152,12 @@ hr {
 .list-group-item{
   height: 50px;
   background-color: #D9D9D9;
+  font-family: 'Marcellus', sans-serif;
 }
 
 h3{
   color: lawngreen;
+  font-family: 'Marcellus', sans-serif;
 }
 
 .list-group{

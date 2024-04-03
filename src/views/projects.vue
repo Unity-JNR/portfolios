@@ -17,7 +17,7 @@
                        <p class="card__title">{{ project.title }}</p>
                        <p class="card__description">{{ project.decription }}</p>
                        <button class="card__button"><a :href="project.github" target="_blank">GitHub</a></button>
-                       <button class="card__button"><a :href="project.vercel" target="_blank">Vercel</a></button>
+                       <button class="card__button"><a :href="project.vercel" target="_blank">Live Link</a></button>
                    
                    </div>
                    </div>
@@ -61,12 +61,15 @@ import spinner from '@/components/spinner.vue'
    </script>
    
    <style scoped>
+   @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
    body{
      min-height: 89.9vh; 
-     background-color: black
+     background-color: black;
+     font-family: 'Marcellus', sans-serif;
    }
    header {
-    background-color: #D9D9D9;;
+    background-color: #D9D9D9;
     color: #000;
     text-align: center;
     padding: 20px 0;
@@ -77,12 +80,13 @@ import spinner from '@/components/spinner.vue'
 header h1 {
     margin: 0;
     font-weight: bolder !important;
+    font-family: 'Marcellus', sans-serif;
 }
     .card {
   position: relative;
   width: 350px;
   aspect-ratio: 16/9;
-  background-color: #f2f2f2;
+  background-color: #D9D9D9;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -118,7 +122,7 @@ header h1 {
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #f2f2f2;
+  background-color: #D9D9D9;
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -131,8 +135,13 @@ header h1 {
 .card__title {
   margin: 0;
   font-size: 20px;
-  color: #333;
+  color: #000;
   font-weight: 700;
+  font-family: 'Marcellus', sans-serif;
+}
+
+.card__title::first-letter{
+  color: lawngreen;
 }
 
 .card:hover svg {
@@ -141,9 +150,10 @@ header h1 {
 
 .card__description {
   margin: 10px 0 10px;
-  font-size: 12px;
-  color: #777;
+  font-size: 15px;
+  color: black;
   line-height: 1.4;
+  font-family: 'Marcellus', sans-serif;
 }
 
 .card__button {
@@ -151,7 +161,7 @@ header h1 {
   border-radius: 8px;
   background: #777;
   border: none;
-  color: white;
+  color: #D9D9D9;
 }
 
 .secondary {

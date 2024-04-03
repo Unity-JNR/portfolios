@@ -87,6 +87,8 @@
   </script>
  
   <style scoped>
+  @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
  header {
     background-color: #D9D9D9;;
     color: #000;
@@ -98,6 +100,7 @@
 header h1 {
     margin: 0;
     font-weight: bolder !important;
+    font-family: 'Marcellus', sans-serif;
 }
  
   /* Section styling */
@@ -106,18 +109,22 @@ header h1 {
       padding: 20px;
       color: #D9D9D9;
       font-weight: 600;
+      font-family: 'Marcellus', sans-serif;
     }
 
 
     .section2 {
       background-color:#D9D9D9;
       padding: 20px;
+      font-family: 'Marcellus', sans-serif;
+
     }
 
 
     h2{
       margin-bottom: 10px;
       color: #D9D9D9;
+      font-family: 'Marcellus', sans-serif;
     }
 
    .section1 h2::first-letter{
@@ -143,6 +150,7 @@ header h1 {
       margin-bottom: 15px;
       box-sizing: border-box;
       background-color: white;
+      font-family: 'Marcellus', sans-serif;
     }
 
 
@@ -152,6 +160,7 @@ header h1 {
       padding: 10px 15px;
       border: none;
       cursor: pointer;
+      font-family: 'Marcellus', sans-serif;
     }
     div #icon {
     display: block;
@@ -162,7 +171,7 @@ header h1 {
   }
 
   div #icon:hover {
-    background-color: #333; /* Change the background color on hover as desired */
+    background-color: #D9D9D9; /* Change the background color on hover as desired */
   }
   iframe{
     margin-top: 1%;
