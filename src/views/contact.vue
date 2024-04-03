@@ -1,14 +1,16 @@
 <template>
-    <div>
+   
       <!-- <Navigation/> -->
-      <h1 id="heading">Contact</h1>
-    </div>
+      <header>
+        <h1>Contact</h1>
+      </header>
+  
    
        
     <div class="section1">
-    <h2><i class="fas fa-envelope"></i> Mail</h2>
+      <i class="fas fa-envelope"></i> <h2> Mail</h2>
     <p>Email Address: unitydemas12@email.com</p>
-    <h2><i class="fas fa-phone"></i> Phone</h2>
+    <i class="fas fa-phone"></i> <h2> Phone</h2>
     <p>Phone Number: 0832673554</p>
     <div>
     <a href="https://www.linkedin.com/in/unity-demas-29a896227/" id="icon" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
@@ -20,7 +22,7 @@
 
 
   <div class="section2">
-    <h2 class="text-success font-weight-bold">Fill in the form</h2>
+    <h3 class="text-success font-weight-bold">Fill in the form</h3>
     <form @submit.prevent="submitForm" method="post" action="https://formspree.io/f/xqkrapkr">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" v-model="formData.name" required>
@@ -85,31 +87,41 @@
   </script>
  
   <style scoped>
-  #heading {
-    color: white;
-  }
- 
-  #heading::first-letter {
-    color: lawngreen;
-  }
+ header {
+    background-color: #D9D9D9;;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+  
+}
+
+header h1 {
+    margin: 0;
+    font-weight: bolder !important;
+}
  
   /* Section styling */
   .section1 {
-    background-color: rgba(124, 252, 0, 0.5);
+    /* background-color: rgba(124, 252, 0, 0.5); */
       padding: 20px;
-      color: white;
+      color: #D9D9D9;
       font-weight: 600;
     }
 
 
     .section2 {
-      background-color: rgb(255, 249, 249,0.5);
+      background-color:#D9D9D9;
       padding: 20px;
     }
 
 
-    h2 {
+    h2{
       margin-bottom: 10px;
+      color: #D9D9D9;
+    }
+
+   .section1 h2::first-letter{
+      color: lawngreen !important;
     }
 
 
@@ -130,6 +142,7 @@
       padding: 10px;
       margin-bottom: 15px;
       box-sizing: border-box;
+      background-color: white;
     }
 
 

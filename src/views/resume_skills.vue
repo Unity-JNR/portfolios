@@ -132,6 +132,9 @@ hr {
   height: 1.5px;
   background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
 }
+.skills{
+    margin-bottom: 50px;
+}
 .container{
     width: auto;
     position: relative;
@@ -233,12 +236,12 @@ hr {
   }
   #placement{
     display: inline-block;
-    /* padding: 20px; */
+    padding: 20px;
     /* margin-bottom: 20px; */
     
   }
   #skilltext{
-    color: rgb(1, 1, 1);
+    color: #D9D9D9;
     font-weight: 800;
     font-size: medium;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

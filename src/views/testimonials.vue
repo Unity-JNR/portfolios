@@ -1,6 +1,8 @@
 <template> 
     <!-- <Navigation/> -->
-    <h1 id="heading">Testimonial</h1>
+	<header>
+        <h1>Testimonials</h1>
+      </header>
 	
 	<div v-if="$store.state.testimonial.length > 0">
 
@@ -11,7 +13,7 @@
 			  <div class="overlay">
 				<div class="overlay-content animate slide-left delay-2">
 				  <h1 class="animate slide-left pop delay-4"></h1>
-				  <p class="animate slide-left pop delay-5" id="test" style=" margin-bottom: 2.5rem;">
+				  <p class="animate slide-left pop delay-5" id="name" style=" margin-bottom: 2.5rem;">
 					{{ testimonials.name }} <em>{{ testimonials.surname }}</em>
 				  </p>
 				</div>
@@ -67,13 +69,18 @@ import spinner from '@/components/spinner.vue'
  
  
  <style scoped >
- #heading{
-     color: white;
- }
+header {
+    background-color: #D9D9D9;;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+  
+}
 
- #heading::first-letter{
-	color: lawngreen;
- }
+header h1 {
+    margin: 0;
+    font-weight: bolder !important;
+}
 
 h1 {
 	font-size: 5.25vmin;
@@ -84,10 +91,17 @@ h1 {
 	font-size: max(5pt, 2vmin);
 	line-height: 1.2;
 	color: lawngreen;
-	margin-bottom: 1.5rem;
-	margin-right: 2.5rem;
+	/* margin-bottom: 1.5rem;
+	margin-right: 2.5rem; */
 }
 
+#name{
+	color: #D9D9D9;
+	margin-right: 2.5rem;
+}
+#name::first-letter{
+	color: lawngreen !important;
+}
 .wrap {
 	display: flex;
 	flex-wrap: nowrap;
