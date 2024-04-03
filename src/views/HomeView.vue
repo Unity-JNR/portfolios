@@ -12,11 +12,11 @@
         <div class="col-lg-6 mx-auto">
           <!-- <p class="lead mb-4" id="text-S">{{ ix.subtxt }}</p> -->
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <!-- <router-link to="/projects"> -->
-              <button type="button" class="btn btn-lg px-4" data-btn @click="downloadCV()">
-                <i class=" fa fa-download"></i>CV
+            <router-link to="/projects">
+              <button type="button" class="btn btn-lg px-4" data-btn >
+                <i class=" fa fa-project-diagram"></i>My work
               </button>
-            <!-- </router-link> -->
+            </router-link>
             <router-link to="/contact">
               <button type="button" class="btn btn-lg px-4" data-btn>contact me</button>
             </router-link>
@@ -34,19 +34,6 @@ export default {
 components:{
   // spinner
 },
-methods: {
-   downloadCV() {
-            // Specify the URL of the document to be downloaded
-            const googleDocsUrl = "https://docs.google.com/document/d/1EnJiQ4BpZFmDuBQeXr6KyMvAVSQ6yqwDDVSs8NV7oKo/edit?usp=sharing";
-            
-            // Replace "/edit" with "/export?format=pdf" to convert the document to PDF format
-            const downloadUrl = googleDocsUrl.replace("/edit", "/export?format=pdf");
-
-            // Open the document in a new tab
-            window.open(downloadUrl, '_blank');
-        }
-
-  }
 
 }
 </script>
@@ -73,7 +60,7 @@ methods: {
 }
 #body{
   transition: all 0.5s ease-in-out;
-  background-image: url('https://cdn-images.imagevenue.com/19/65/a5/ME17X4MH_o.jpg');
+  background-image: url('https://cdn-images.imagevenue.com/73/59/a3/ME17Z48M_o.png');
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
