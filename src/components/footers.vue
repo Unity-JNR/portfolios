@@ -28,7 +28,7 @@
     
     <style scoped>
     footer{
-        color: #D9D9D9;
+        color: lawngreen;
     }
     
     

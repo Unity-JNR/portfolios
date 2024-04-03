@@ -1,6 +1,11 @@
 <template>
+  <body>
+    
  
-      <h1 id="heading" class="py-4">Projects</h1>
+ 
+    <header>
+        <h1>Projects</h1>
+      </header>
   
          <div v-if="$store.state.project.length > 0" >
            <div class="container">
@@ -29,7 +34,7 @@
 
   
       
-
+        </body>
   </template>
   
    
@@ -56,6 +61,23 @@ import spinner from '@/components/spinner.vue'
    </script>
    
    <style scoped>
+   body{
+     min-height: 89.9vh; 
+     background-color: black
+   }
+   header {
+    background-color: #D9D9D9;;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 65px;
+  
+}
+
+header h1 {
+    margin: 0;
+    font-weight: bolder !important;
+}
     .card {
   position: relative;
   width: 350px;

@@ -1,4 +1,9 @@
 <template>
+
+     <header>
+        <h1>Resume</h1>
+      </header>
+
 <div  v-if="$store.state.education !== '' && $store.state.job !== '' && $store.state.skills.length > 0"> 
     <div class="container pt-4 ">
         <div class="row">
@@ -54,6 +59,10 @@
         </div>
     </div>
     </div>
+         <!-- <hr> -->
+    <header class="mt-4 skills">
+        <h1>Skills</h1>
+      </header>
 
     <div v-for="skill in $store.state.skills" :key="skill.level" id="placement">
  <div>
@@ -106,8 +115,25 @@ import spinner from '@/components/spinner.vue'
   background-size: cover;
   border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.104), rgba(0, 0, 0, 0.175));
 } */
+header {
+    background-color: #D9D9D9;;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+  
+}
+
+header h1 {
+    margin: 0;
+    font-weight: bolder !important;
+}
+hr {
+  border: 0;
+  height: 1.5px;
+  background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+}
 .container{
-    width: 1000px;
+    width: auto;
     position: relative;
     display: flex;
     justify-content: center;
@@ -135,7 +161,7 @@ import spinner from '@/components/spinner.vue'
 }
 
 .container .card:hover .face.face1{
-    background: #28ec0a;
+    background: #000;
     transform: translateY(0);
 }
 
@@ -155,14 +181,17 @@ import spinner from '@/components/spinner.vue'
 .container .card .face.face1 .content h3{
     margin: 10px 0 0;
     padding: 0;
-    color: #fff;
+    color: #D9D9D9;
     text-align: center;
     font-size: 1.5em;
+}
+.container .card .face.face1 .content h3::first-letter{
+    color: lawngreen;
 }
 
 .container .card .face.face2{
     position: relative;
-    background: #fff;
+    background: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,18 +222,18 @@ import spinner from '@/components/spinner.vue'
 
 .container .card .face.face2 .content a:hover{
     background: #333;
-    color: #fff;
+    color: #D9D9D9;
 }
 
 #skillimage{
     width: 300px;
     height: 250px;
-    background-color: white;
+    background-color: #D9D9D9;
 
   }
   #placement{
     display: inline-block;
-    padding: 20px;
+    /* padding: 20px; */
     /* margin-bottom: 20px; */
     
   }
@@ -236,4 +265,90 @@ import spinner from '@/components/spinner.vue'
         margin-bottom: 10px;
     }
 }
+
+@media (max-width: 992px) {
+    .container {
+        width: 100px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        /* padding-top: 2px ; */
+        /* margin-bottom: 20px; */
+    }
+
+    .container .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (width: 325px) {
+  
+    .container {
+        width: 150px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        /* padding-top: 2px ; */
+        /* margin-bottom: 20px; */
+        /* overflow: hidden; */
+    }
+
+    .container .card {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+    .container .card .face{
+        width: 150px;
+    }
+    .container .card .face.face1{
+        width: 150px;
+    }
+    .container .card .face.face2{
+        width: 150px;
+    }
+
+  
+#skillimage{
+    width: 100px;
+    height: 100px;
+}
+
+
+}
+
+@media (max-width: 324px) {
+  
+  .container {
+      width: 250px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      /* padding-top: 2px ; */
+      /* margin-bottom: 20px; */
+      /* overflow: hidden; */
+  }
+
+  .container .card {
+      width: 250px;
+      margin-bottom: 20px;
+  }
+  .container .card .face{
+      width: 250px;
+  }
+
+#skillimage{
+  width: 100px;
+  height: 100px;
+}
+#placement{
+    /* margin-top: 5px; */
+   padding: 5px;
+}
+.skills{
+    margin-bottom: 50px;
+}
+
+}
+
 </style>
