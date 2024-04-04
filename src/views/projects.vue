@@ -17,7 +17,7 @@
                        <p class="card__title">{{ project.title }}</p>
                        <p class="card__description">{{ project.decription }}</p>
                        <button class="card__button"><a :href="project.github" target="_blank">GitHub</a></button>
-                       <button class="card__button"><a :href="project.vercel" target="_blank">Live Link</a></button>
+                       <button class="card__button"><li class="fa fa-link"></li> <a :href="project.vercel" target="_blank">Live Link</a></button>
                    
                    </div>
                    </div>
@@ -159,9 +159,10 @@ header h1 {
 .card__button {
   padding: 15px;
   border-radius: 8px;
-  background: #777;
+  background: #000;
   border: none;
   color: #D9D9D9;
+  margin: 2px;
 }
 
 .secondary {
@@ -170,4 +171,11 @@ header h1 {
   border: 1px solid #777;
 }
 
+a{
+  color: #D9D9D9;
+  text-decoration: none;
+  font-family: 'Marcellus', sans-serif;
+
+
+}
    </style>

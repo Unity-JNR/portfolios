@@ -83,6 +83,12 @@
                             <li>
                                 <p>      {{ $store.state.job.time }}</p>
                             </li>
+                            <li>
+                                <p>      {{ $store.state.job.res }}</p>
+                            </li>
+                            <li>
+                                <p>      {{ $store.state.job.leave }}</p>
+                            </li>
                         </ul>
                     </div>
                 </div>

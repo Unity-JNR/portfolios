@@ -12,7 +12,7 @@
         <i class="fas fa-envelope"></i> <h2> Mail</h2>
       <p>Email Address: unitydemas12@email.com</p>
       <i class="fas fa-phone"></i> <h2> Phone</h2>
-      <p>Phone Number: 0832673554</p>
+      <p>Phone Number: +27 83 267 3554</p>
       </div>
     <div>
     <a href="https://www.linkedin.com/in/unity-demas-29a896227/" id="icon" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
@@ -24,7 +24,7 @@
 
 
   <div class="section2">
-    <h3 class="text-success font-weight-bold">Fill in the form</h3>
+    <h3 class="font-weight-bold">Fill in the form</h3>
     <form @submit.prevent="submitForm" method="post" action="https://formspree.io/f/xqkrapkr">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" v-model="formData.name" required>
@@ -131,6 +131,9 @@ header h1 {
 
    .section1 h2::first-letter{
       color: lawngreen !important;
+    }
+    h3{
+      color: black;
     }
 
 
