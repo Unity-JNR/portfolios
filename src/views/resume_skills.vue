@@ -4,10 +4,10 @@
         <h1>Resume</h1>
       </header>
 
-<div  v-if="$store.state.education !== '' && $store.state.job !== '' && $store.state.skills.length > 0"> 
+<div  v-if="$store.state.education !== '' && $store.state.job !== '' && $store.state.skills.length > 0 && $store.state.studies !== ''"> 
     <div class="container pt-4 ">
         <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
             <div class="card">
                 <div class="face face1">
                     <div class="content">
@@ -27,12 +27,43 @@
                             <li>
                                 <p>major subject: {{ $store.state.education.sub }}</p>
                             </li>
+                            <li>
+                                <p>Degree: {{ $store.state.education.degree }}</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img :src="$store.state.studies.url">
+                        <h3>Education</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <p> {{ $store.state.studies.school }}</p>
+                            </li>
+                            <li>
+                                <p> {{ $store.state.studies.year }}</p>
+                            </li>
+                            <li>
+                                <p> {{ $store.state.studies.sub }}</p>
+                            </li>
+                            <li>
+                                <p> Degree: {{ $store.state.studies.degree }}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
             <div class="card">
                 <div class="face face1">
                     <div class="content">
@@ -95,6 +126,9 @@ import spinner from '@/components/spinner.vue'
     },
     fetchSkills(){
       this.$store.dispatch('fetchSkills');
+    },
+    fetchStudies(){
+        this.$store.dispatch('fetchStudies');
     }
   },
 
@@ -102,6 +136,7 @@ import spinner from '@/components/spinner.vue'
     this.fetcheducation
     this.fetchJob
     this.fetchSkills
+    this.fetchStudies
   }
     }
 </script>

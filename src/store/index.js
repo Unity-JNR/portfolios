@@ -17,6 +17,7 @@ export default createStore({
     res:[],
     dob:[],
     passions:[],
+    studies:[],
 
   },
   mutations: {
@@ -52,6 +53,9 @@ export default createStore({
     },
     setpassions(state,data){
       state.passions = data
+    },
+    setStudies(state,data){
+      state.studies = data
     }
     
   },
@@ -276,7 +280,15 @@ export default createStore({
         console.log(data.passion[0])
         commit('setpassions',data.passion[0])
       })
-    }
+    },
+    fetchStudies({commit}){
+      fetch(hostedData)
+      .then(response=> response.json())
+      .then(data=> {
+        console.log(data.studies[0])
+        commit('setStudies',data.studies[0])
+      })
+    },
     
   },
   modules: {},
