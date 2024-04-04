@@ -18,6 +18,8 @@ export default createStore({
     dob:[],
     passions:[],
     studies:[],
+    intern:[],
+    skill:[],
 
   },
   mutations: {
@@ -56,6 +58,12 @@ export default createStore({
     },
     setStudies(state,data){
       state.studies = data
+    },
+    setIntern(state,data){
+      state.intern = data
+    },
+    setsoftSkills(state,data){
+      state.skill = data
     }
     
   },
@@ -289,6 +297,22 @@ export default createStore({
         commit('setStudies',data.studies[0])
       })
     },
+    fetchIntern({commit}){
+      fetch(hostedData)
+      .then(response=> response.json())
+      .then(data=> {
+        console.log(data.intern[0])
+        commit('setIntern',data.intern[0])
+      })
+    },
+    fetchsoftSkills({commit}){
+      fetch(hostedData)
+      .then(response=> response.json())
+      .then(data=> {
+        console.log(data.skill[0])
+        commit('setsoftSkills',data.skill)
+      })
+    }
     
   },
   modules: {},

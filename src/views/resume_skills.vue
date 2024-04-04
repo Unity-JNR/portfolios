@@ -7,7 +7,7 @@
 <div  v-if="$store.state.education !== '' && $store.state.job !== '' && $store.state.skills.length > 0 && $store.state.studies !== ''"> 
     <div class="container pt-4 ">
         <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-3">
             <div class="card">
                 <div class="face face1">
                     <div class="content">
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-3">
             <div class="card">
                 <div class="face face1">
                     <div class="content">
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-3">
             <div class="card">
                 <div class="face face1">
                     <div class="content">
@@ -94,6 +94,34 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img :src="$store.state.intern.url">
+                        <h3>Job</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <p>    {{ $store.state.intern.work }}</p>
+                            </li>
+                            <li>
+                                <p>       {{ $store.state.intern.at }}</p>
+                            </li>
+                            <li>
+                                <p>      {{ $store.state.intern.time }}</p>
+                            </li>
+                            <li>
+                                <p>      {{ $store.state.intern.res }}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     </div>
          <!-- <hr> -->
@@ -107,7 +135,18 @@
      <p id="skilltext">{{skill.level}}</p>
  </div>
     </div>
+    <hr>
+      <h2>
+        Soft skills
+      </h2>
+    <div v-for="sSkill in $store.state.skill" :key="sSkill.name" id="placement">
+ <div>
+     <img :src="sSkill.img" alt="" id="skillimage">
+     <p id="skilltext">{{sSkill.name}}</p>
+ </div>
+    </div>
 </div>
+
 
 <div v-else>
   <spinner/>
@@ -135,6 +174,12 @@ import spinner from '@/components/spinner.vue'
     },
     fetchStudies(){
         this.$store.dispatch('fetchStudies');
+    },
+    fetchIntern(){
+        this.$store.dispatch('fetchIntern');
+    },
+    fetchsoftSkills(){
+        this.$store.dispatch('fetchsoftSkills');
     }
   },
 
@@ -143,6 +188,8 @@ import spinner from '@/components/spinner.vue'
     this.fetchJob
     this.fetchSkills
     this.fetchStudies
+    this.fetchIntern
+    this.fetchsoftSkills
   }
     }
 </script>
@@ -175,6 +222,13 @@ hr {
   border: 0;
   height: 1.5px;
   background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+}
+h2{
+  color: #D9D9D9 !important;
+  font-family: 'Marcellus', sans-serif;
+}
+h2::first-letter{
+  color: lawngreen !important;
 }
 .skills{
     margin-bottom: 50px;
