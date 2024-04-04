@@ -10,7 +10,7 @@
             <h2>Who am I?</h2>
             <div class="bg">
               <img :src="$store.state.aboutimage" alt="" class=" img-fluid">
-              <p class="lead p">{{ $store.state.about }}</p>
+              <p class="lead p">{{ $store.state.about }} {{ $store.state.passions }}</p>
             </div>
           </section>
           <section class="about-section">
@@ -21,7 +21,7 @@
                 <div class="col-lg-4 ">
                   <h3 id="heading">Hobbies:</h3>
                   <ul class="list-group mt-3 mb-3">
-                    <li class="list-group-item">Play games</li>
+                    <li class="list-group-item">Playing games</li>
                     <li class="list-group-item">Watching Anime</li>
                     <li class="list-group-item">Spending time with family and friends</li>
                     <li class="list-group-item">Coding</li>

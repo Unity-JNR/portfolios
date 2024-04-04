@@ -58,6 +58,9 @@
                             <li>
                                 <p> Degree: {{ $store.state.studies.degree }}</p>
                             </li>
+                            <li>
+                                <p>  {{ $store.state.studies.reward }}</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
