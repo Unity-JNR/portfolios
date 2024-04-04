@@ -68,7 +68,7 @@
                 <div class="face face1">
                     <div class="content">
                         <img :src="$store.state.job.url">
-                        <h3>Job</h3>
+                        <h3>Work Experience</h3>
                     </div>
                 </div>
                 <div class="face face2">
@@ -99,7 +99,7 @@
                 <div class="face face1">
                     <div class="content">
                         <img :src="$store.state.intern.url">
-                        <h3>Job</h3>
+                        <h3>Work Experience</h3>
                     </div>
                 </div>
                 <div class="face face2">
