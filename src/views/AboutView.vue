@@ -9,6 +9,7 @@
           <section class="about-section">
             <h2>Who am I?</h2>
             <div class="bg">
+              <img :src="$store.state.aboutimage" alt="" class=" img-fluid">
               <p class="lead p">{{ $store.state.about }}</p>
             </div>
           </section>
@@ -19,7 +20,7 @@
               <div class="row">
                 <div class="col-lg-4 ">
                   <h3 id="heading">Hobbies:</h3>
-                  <ul class="list-group">
+                  <ul class="list-group mt-3 mb-3">
                     <li class="list-group-item">Play games</li>
                     <li class="list-group-item">Watching Anime</li>
                     <li class="list-group-item">Spending time with family and friends</li>
@@ -28,7 +29,7 @@
                 </div>
                 <div class="col-lg-4">
                   <h3 id="heading">Languages:</h3>
-                  <ul class="list-group">
+                  <ul class="list-group mt-3 mb-3">
                     <li class= "list-group-item">English</li>
                     <li class="list-group-item">Afrikaans</li>
                     <li class="list-group-item"></li>
@@ -37,7 +38,7 @@
                 </div>
                 <div class="col-lg-4">
                   <h3 id="heading">Details:</h3>
-                  <ul class="list-group">
+                  <ul class="list-group mt-3">
                     <li class= "list-group-item" ><p >DOB:{{$store.state.dob}}</p></li>
                     <li class= "list-group-item" ><p >Location: Northpine </p></li>
                     <li class= "list-group-item" ><p >Contact:+27 83 267 3554 </p></li>
@@ -54,6 +55,7 @@
       </div>
     </div>
   </div>
+  <button @click="openGoogleDocs()" class="btn">Open CV</button>
 </template>
 
 <script>
@@ -62,6 +64,13 @@ import spinner from '@/components/spinner.vue'
 export default {
   components:{
     spinner
+  },
+
+  
+  methods: {
+    openGoogleDocs() {
+        window.open('https://docs.google.com/document/d/15DJ_P7XHRPpOQ0Fj4B-GjTtFlizEvGw0XUr5SGd1RGA/edit?usp=sharing', '_blank');
+    }
   },
   computed: {
     fetchData() {
@@ -82,6 +91,7 @@ export default {
     this.fetchAbout;
     this.fetchDOB;
     this.fetchpassions;
+ 
   },
 };
 </script>
@@ -163,6 +173,36 @@ h3{
 .list-group{
   border-radius: 20px;
   box-shadow: 0 0 10px lawngreen; /* Horizontal offset, vertical offset, blur radius, color */
+}
+.btn {
+ width: 9em;
+ height: 3em;
+ color: white;
+ font-weight: bold;
+ border-radius: 30em;
+ font-size: 15px;
+ font-family: 'Marcellus', sans-serif;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+ border: 1px solid rgb(15, 233, 26);
+}
+.btn::before {
+ content: '';
+ width: 0;
+ height: 3em;
+ border-radius: 30em;
+ position: absolute;
+ color: #d9d9d9;
+ top: 0;
+ left: 0;
+ background-image: linear-gradient(to right, #25e807 10%, #2cf52c 100%);
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+.btn:hover::before {
+ width: 9em;
 }
 
 /* Media Queries */

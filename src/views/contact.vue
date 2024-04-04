@@ -8,16 +8,18 @@
    
        
     <div class="section1">
-      <i class="fas fa-envelope"></i> <h2> Mail</h2>
-    <p>Email Address: unitydemas12@email.com</p>
-    <i class="fas fa-phone"></i> <h2> Phone</h2>
-    <p>Phone Number: 0832673554</p>
+      <div class="icons">
+        <i class="fas fa-envelope"></i> <h2> Mail</h2>
+      <p>Email Address: unitydemas12@email.com</p>
+      <i class="fas fa-phone"></i> <h2> Phone</h2>
+      <p>Phone Number: 0832673554</p>
+      </div>
     <div>
     <a href="https://www.linkedin.com/in/unity-demas-29a896227/" id="icon" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
   <!-- Add your LinkedIn link or information here -->
   <a href="https://github.com/Unity-JNR" target="_blank" id="icon"><i class="fab fa-github"></i>Github</a>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8873330180445!2d18.714167875748043!3d-33.866794373227435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc53e11bdbaf17%3A0x2fdeb6e1ebd4a43b!2sLindenhof%2C%20Northpine%2C%20Cape%20Town%2C%207560!5e0!3m2!1sen!2sza!4v1705046450029!5m2!1sen!2sza" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13251.33587586555!2d18.701620755980876!3d-33.8681695216258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc515f839e7423%3A0xf289ddac7d7cc645!2sNorthpine%2C%20Cape%20Town%2C%207560!5e0!3m2!1sen!2sza!4v1712213192702!5m2!1sen!2sza" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div> 
 
 
@@ -176,4 +178,5 @@ header h1 {
   iframe{
     margin-top: 1%;
   }
+ 
   </style>

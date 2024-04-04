@@ -18,7 +18,9 @@
               </button>
             </router-link>
             <router-link to="/contact">
-              <button type="button" class="btn btn-lg px-4" data-btn>contact me</button>
+              <button type="button" class="btn btn-lg px-4" data-btn>
+               <i class="fa fa-phone"></i> contact
+              </button>
             </router-link>
           </div>
         </div>
@@ -46,9 +48,9 @@ components:{
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding-top: 90px;
-  padding-bottom: 90px;
+  padding-bottom: 90px; 
 }
 #ic{
   animation-name: fadeBeat;
@@ -60,7 +62,7 @@ components:{
 }
 #body{
   transition: all 0.5s ease-in-out;
-  background-image: url('https://cdn-images.imagevenue.com/73/59/a3/ME17Z48M_o.png');
+  background-image: url('https://cdn-images.imagevenue.com/6f/ed/79/ME17ZE05_o.jpg');
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -112,6 +114,9 @@ components:{
   100%{
     filter: blur(0%);
   }
+}
+a{
+  color: white;
 }
 [data-btn] {
  width: 9em;

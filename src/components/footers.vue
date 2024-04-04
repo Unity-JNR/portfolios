@@ -29,6 +29,7 @@
     <style scoped>
     footer{
         color: lawngreen;
+        font-family: 'Marcellus', sans-serif;
     }
     
     
