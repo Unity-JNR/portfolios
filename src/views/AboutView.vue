@@ -55,7 +55,7 @@
       </div>
     </div>
   </div>
-  <button @click="openGoogleDocs()" class="btn">Open CV</button>
+  <button @click="openGoogleDocs()" class="btn">Download CV</button>
 </template>
 
 <script>
@@ -69,7 +69,7 @@ export default {
   
   methods: {
     openGoogleDocs() {
-        window.open('https://docs.google.com/document/d/15DJ_P7XHRPpOQ0Fj4B-GjTtFlizEvGw0XUr5SGd1RGA/edit?usp=sharing', '_blank');
+        window.open('https://drive.google.com/file/d/1IHHbD3d6PSQCcDlT19CEIClt1YkB-Mv_/view?usp=sharing', '_blank');
     }
   },
   computed: {
