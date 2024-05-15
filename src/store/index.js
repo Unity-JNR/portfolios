@@ -20,6 +20,7 @@ export default createStore({
     studies:[],
     intern:[],
     skill:[],
+    A_skills:[],
 
   },
   mutations: {
@@ -64,6 +65,9 @@ export default createStore({
     },
     setsoftSkills(state,data){
       state.skill = data
+    },
+    setAdditionalskills(state,data){
+      state.A_skills = data
     }
     
   },
@@ -312,7 +316,16 @@ export default createStore({
         console.log(data.skill[0])
         commit('setsoftSkills',data.skill)
       })
+    },
+    fetchAdditionalSkills({commit}){
+      fetch(hostedData)
+      .then(response=> response.json())
+      .then(data=> {
+        console.log(data.A_skill[0])
+        commit('setAdditionalskills',data.A_skill)
+      })
     }
+
     
   },
   modules: {},
