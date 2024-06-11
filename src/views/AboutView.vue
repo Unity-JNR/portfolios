@@ -69,7 +69,7 @@ export default {
   
   methods: {
     openGoogleDocs() {
-        window.open('https://drive.google.com/file/d/1IHHbD3d6PSQCcDlT19CEIClt1YkB-Mv_/view?usp=sharing', '_blank');
+        window.open('https://drive.google.com/file/d/1zNkvOSBkr2BpRgbAuyLz8TjXlZor2_3r/view?usp=sharing', '_blank');
     }
   },
   computed: {
