@@ -138,7 +138,7 @@ export default createStore({
             return response.json();
           })
           .then(data => {
-           console.log(data.jobs[0])
+          //  console.log(data.jobs[0])
             commit('setJob', data.jobs[0]);
           })
           .catch(error => {
@@ -187,7 +187,7 @@ export default createStore({
             return response.json();
           })
           .then(data => {
-           console.log(data.projects[0])
+          //  console.log(data.projects[0])
           commit('setProject', data.projects);
           // console.log("Image URL:", data);
           })
@@ -212,7 +212,7 @@ export default createStore({
             return response.json();
           })
           .then(data => {
-           console.log(data.skills[0])
+          //  console.log(data.skills[0])
           commit('setSkill', data.skills);
           // console.log("Image URL:", data);
           })
@@ -237,7 +237,7 @@ export default createStore({
             return response.json();
           })
           .then(data => {
-           console.log(data.profile[0])
+          //  console.log(data.profile[0])
           commit('setProfile', data.profile[0]);
           // console.log("Image URL:", data);
           })
@@ -262,7 +262,7 @@ export default createStore({
             return response.json();
           })
           .then(data => {
-           console.log(data.aboutimage[0])
+          //  console.log(data.aboutimage[0])
           commit('setAbout', data.aboutimage[0]);
           // console.log("Image URL:", data);
           })
@@ -281,7 +281,7 @@ export default createStore({
       fetch(hostedData)
       .then(response=> response.json())
       .then(data=> {
-        console.log(data.DOB[0])
+        // console.log(data.DOB[0])
         commit('setDOB',data.DOB[0])
       }) 
     },
@@ -289,7 +289,7 @@ export default createStore({
       fetch(hostedData)
       .then(response=> response.json())
       .then(data=> {
-        console.log(data.passion[0])
+        // console.log(data.passion[0])
         commit('setpassions',data.passion[0])
       })
     },
@@ -297,7 +297,7 @@ export default createStore({
       fetch(hostedData)
       .then(response=> response.json())
       .then(data=> {
-        console.log(data.studies[0])
+        // console.log(data.studies[0])
         commit('setStudies',data.studies[0])
       })
     },
@@ -305,7 +305,7 @@ export default createStore({
       fetch(hostedData)
       .then(response=> response.json())
       .then(data=> {
-        console.log(data.intern[0])
+        // console.log(data.intern[0])
         commit('setIntern',data.intern[0])
       })
     },
@@ -313,7 +313,7 @@ export default createStore({
       fetch(hostedData)
       .then(response=> response.json())
       .then(data=> {
-        console.log(data.skill[0])
+        // console.log(data.skill[0])
         commit('setsoftSkills',data.skill)
       })
     },
@@ -321,7 +321,7 @@ export default createStore({
       fetch(hostedData)
       .then(response=> response.json())
       .then(data=> {
-        console.log(data.A_skill[0])
+        // console.log(data.A_skill[0])
         commit('setAdditionalskills',data.A_skill)
       })
     }
