@@ -10,7 +10,7 @@
          <div v-if="$store.state.project.length > 0" >
            <div class="container">
              <div class="row">
-               <div v-for="project in $store.state.project" :key="project.title" class="col-lg-4 pb-4 d-flex justify-content-center">
+               <div v-for="project in reversedProjects" :key="project.title" class="col-lg-4 pb-4 d-flex justify-content-center">
                    <div class="card">
                    <img class="image card__image" :src="project.url">
                    <div class="card__content">
@@ -50,6 +50,9 @@ import spinner from '@/components/spinner.vue'
                // Call the fetchData action using dispatch
                this.$store.dispatch('fetchProject');
            },
+           reversedProjects() {
+      return this.$store.state.project.slice().reverse();
+    }
        },
    
        mounted() {
