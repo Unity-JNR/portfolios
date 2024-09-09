@@ -116,7 +116,7 @@ components:{
   }
 }
 a{
-  color: white;
+  color: #faf5f5 !important;
 }
 [data-btn] {
  width: 9em;
