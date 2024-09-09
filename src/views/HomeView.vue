@@ -115,9 +115,9 @@ components:{
     filter: blur(0%);
   }
 }
-a{
+/* a{
   color: #faf5f5 !important;
-}
+} */
 [data-btn] {
  width: 9em;
  height: 3em;
@@ -147,6 +147,10 @@ a{
 }
 [data-btn]:hover::before {
  width: 9em;
+}
+
+[data-btn]:hover {
+  color: white; /* Change text color to white on hover */
 }
 @keyframes typewriter {
   0% {
